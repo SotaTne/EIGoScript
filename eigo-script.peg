@@ -1,0 +1,22 @@
+
+
+DefineStmt = I_Keyword Define_Keyword (Function_Keyword) Identifier eol // I define function main.
+StartDiscusStmt = I_Keyword Begin_Keyword IdentifierForced Discussion_Keyword eol // I begin main's discussion.
+EndDiscusStmt = I_Keyword End_Keyword IdentifierForced Discussion_Keyword eol // I end main's discussion
+IfStmt = I_Keyword Expr When_Keyword Expr ()
+
+
+Identifier = [a-zA-Z_][a-zA-Z0-9_]*
+IdentifierForced = [a-zA-Z_][a-zA-Z0-9_]* forces // No space between identifier and forces
+
+I_Keyword = 'I'
+Define_Keyword = 'define'/'Define'
+Discussion_Keyword = 'discussion'/'Discussion'
+Function_Keyword = 'function'/'Function'
+Begin_Keyword = 'begin'/'Begin'
+End_Keyword = 'end'/'End'
+When_Keyword = 'when'/'When'
+
+forces = "'s"
+
+eol = '.'/';'

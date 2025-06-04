@@ -1,0 +1,36 @@
+We keep repeating the sequence:
+  set A to 3;
+  triple it;
+  print it;
+  wait a tick;
+until A falls to 2. Then we stop.
+
+We keep repeating the sequence: // whileが始まることと、以下の文がwhileであること
+文　;
+// これが一文以上
+until 条件分. Then we stop. 
+
+We keep repeating the sequence:
+  set A to 3;
+  triple it;
+  print it;
+  wait a tick;
+until A falls to 2. Then we stop.
+
+We keep repeating the Outer sequence: // 名前をつけることもできる
+  set A to 3;
+  triple it;
+
+  We keep repeating the Inner sequence:
+    set B to 1;
+    double B;
+  until B is 0, then we stop Inner;
+
+  wait a tick;
+until A is 2, then we stop Outer.
+
+
+We keep repeating the (Identifier)? sequence: // whileが始まることと、以下の文がwhileであること
+文　;
+// これが一文以上
+until 条件分. Then we stop (Identifier)?. 

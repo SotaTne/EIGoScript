@@ -1,0 +1,38 @@
+We keep repeating the sequence:
+  set A to 3;
+  triple it;
+  print it;
+  wait a tick;
+until A falls to 2. Then we stop.
+
+定義系は I …
+
+宣言・制御構造は “I” を省く
+
+例：name A as number, let it be 3.
+
+例：Let A be A + 1.
+→ 命令形なので主語なしで自然。
+
+メタ操作・説明的文は “I” を書く
+
+例：I define function main.
+
+例：I give back text.
+
+例：I begin main’s discussion.
+→ 書き手（語り手）を立てることで「定義開始」「返却」などを際立たせる。
+
+条件・反復の開始句も “I” なし
+
+既定のキーワード (We keep repeating …, Suppose …) が主語代わり。
+
+スタイル・リンターで自動補完を許可
+
+教育モード：主語が無い行には “I” を自動挿入して警告。
+
+簡潔モード：命令形のみで許容。
+
+name A as number, let it be 3.　変数定義
+name A as number.
+let A be 3.

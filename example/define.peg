@@ -1,0 +1,29 @@
+DefineStmt = keyword_I keyword_Define (DefineFunctionExpr/DefineVerbExpr/DefineEntityExpr)*
+
+DefineEntityExpr = . // 今回は実装しない
+DefineFunctionExpr = keyword_a keyword_function keyword_called Identifier (keyword_with keyword_the keyword_parameters COLON Identifier ("," Identifier)*)? "."
+DefineVerbExpr = DefineSVVerbExpr / DefineSVOVerbExpr / DefineSVCVerb / DefineSVOCVerbExpr / DefineSVOOVerbExpr
+DefineSVVerbExpr = keyword_a keyword_sv keyword_verb keyword_called Identifier"."
+DefineSVOVerbExpr = keyword_a keyword_svo keyword_verb keyword_called Identifier keyword_with COLON Identifier "."
+DefineSVCVerb = keyword_a keyword_svc keyword_verb keyword_called Identifier keyword_with COLON Identifier "."
+DefineSVOCVerbExpr = keyword_a keyword_svoc keyword_verb keyword_called Identifier keyword_with COLON Identifier","Identifier "."
+DefineSVOOVerbExpr = keyword_a keyword_svoo keyword_verb keyword_called Identifier keyword_with COLON Identifier","Identifier "."
+
+
+keyword_I = "I"
+keyword_Define = "define"
+keyword_a = "a"
+keyword_function = "function"
+keyword_verb = "verb"
+keyword_called = "called"
+keyword_with = "with"
+keyword_the = "the"
+keyword_parameters = "parameters"
+keyword_sv = "sv"
+keyword_svc = "svc"
+keyword_svo = "svo"
+keyword_svoc = "svoc"
+keyword_svoo = "svoo"
+COLON = ":"
+
+Identifier = [a-zA-Z_][a-zA-Z0-9_]*
