@@ -85,8 +85,8 @@ pub const SubNodeIndex = struct {
 
 /// 結合し index を調整した新しい SubNodeList を返す
 pub fn joinSubNodeList(
-    allocator: std.mem.Allocator,
     baseList: SubNodeList,
+    allocator: std.mem.Allocator,
     additionalList: SubNodeList,
 ) !SubNodeList {
     // 新しい MultiArrayList を初期化
